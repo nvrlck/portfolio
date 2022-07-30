@@ -14,3 +14,9 @@ closeElem.addEventListener('click', () => {
 closeElem2.addEventListener('click', () => {
     menu.classList.remove('active');
 });
+
+const counters = document.querySelectorAll('.skills__percentage'),
+    lines = document.querySelectorAll('.skills__bar span');
+counters.forEach( (item, i) => {
+    lines[i].style.width = item.innerHTML;
+});
